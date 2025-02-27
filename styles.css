@@ -1,0 +1,682 @@
+body{
+
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* for scrolling on click on menu */
+}
+
+
+/* Navbar Styling */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background: rgba(252, 252, 252, 0) !important; /* Semi-transparent navbar */
+ 
+}
+
+.para{
+  text-align: justify;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  max-width: 800px;
+  hyphens: auto;
+}
+
+
+/* Carousel Styling */
+.carousel {
+  position: relative;
+}
+
+.carousel-item {
+  height: 500px; /* Fixed height */
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevents stretching and ensures consistent cropping */
+  object-position: center center; /* Keeps the important part of the image visible */
+}
+
+/* Black Opacity Overlay */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black opacity */
+  z-index: 1;
+}
+
+/* Text Styling */
+.carousel-caption {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  opacity: 75%;
+ 
+}
+
+
+
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .carousel-item {
+      height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .carousel-caption {
+   
+      top: 65%;
+  }
+  .carousel-caption h3 {
+    font-size: 3vw;
+    
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+      height: 250px; /* Further reduction in height for small devices */
+  }
+
+  .carousel-caption {
+   
+    top: 65%;
+}
+.carousel-caption h3 {
+  font-size: 3vw;
+  
+}
+}
+
+/* Text Styling for 2nd image*/
+.carousel-caption2 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: end;
+  z-index: 2;
+  opacity: 75%;
+ 
+}
+
+
+
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .carousel-item{
+      height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .carousel-caption2 {
+   
+      top: 60%;
+      left:70%;
+  }
+  .carousel-caption2 h3 {
+    font-size: 3vw;
+    
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+      height: 250px; /* Further reduction in height for small devices */
+  }
+
+  .carousel-caption2 {
+   
+    top: 60%;
+}
+.carousel-caption2 h3 {
+  font-size: 3vw;
+  
+}
+}
+
+/* Text Styling for 3rd image*/
+.carousel-caption1 {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  opacity: 75%;
+ 
+}
+
+
+
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .carousel-item{
+      height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .carousel-caption1 {
+   
+      top: 60%;
+      left: 25%;
+  }
+  .carousel-caption1 h3 {
+    font-size: 3vw;
+    
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+      height: 250px; /* Further reduction in height for small devices */
+  }
+
+  .carousel-caption1 {
+   
+    top: 60%;
+      left: 25%;
+}
+.carousel-caption1 h3 {
+  font-size: 3vw;
+  
+}
+}
+
+.nav-link1{
+  font-family: 'Poppins', sans-serif;
+  opacity: 70%;
+ color: rgb(0, 0, 0);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+}
+.nav-link1:hover{
+  opacity: 100%;
+
+}
+
+/* Reduce margin on smaller screens */
+@media (max-width: 992px) {
+.nav-link1 {
+      margin: 5px;
+      font-size: 14px;
+  }
+} 
+.nav-link{
+
+  font-family: 'Poppins', sans-serif;
+  opacity: 85%;
+ color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.nav-link:hover{
+  opacity: 100%;
+
+}
+.book{
+
+  font-family: 'Poppins', sans-serif;
+  opacity: 75%;
+}
+a {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Uses the default text color */
+}
+
+ /* White Toggler Icon */
+ .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.custom-navbar {
+ 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures navbar stays on top of other elements */
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for better visibility */
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for clarity */
+}
+
+
+/* Keep menu items in one row */
+.navbar-nav {
+  display: flex;
+  flex-wrap: nowrap; /* Prevents items from wrapping */
+  overflow-x: auto; /* Allows horizontal scrolling on very small screens */
+  white-space: nowrap;
+}
+
+/* Reduce margin on smaller screens */
+@media (max-width: 992px) {
+  .navbar-nav .nav-link {
+      margin: 5px;
+      font-size: 14px;
+  }
+}
+
+/* Ensure buttons remain visible */
+.btn-info {
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+
+/* Button styling */
+.btn-info {
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+  
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .nav-item{
+      font-size: 12px; /* Adjust height for smaller screens */
+      display: d-flex;
+      margin-top: auto;
+  }
+
+ 
+
+ 
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+      height: 250px; /* Further reduction in height for small devices */
+  }
+
+  .carousel-caption1 {
+   
+    top: 30%;
+}
+.carousel-caption1 h3 {
+  font-size: 2.5vw;
+  
+}
+}
+
+
+
+.title{
+
+    color: rgb(255, 230, 0);
+   
+   
+  
+    font-style: italic;
+  
+}
+
+/* Make the carousel text responsive */
+.carousel-caption {
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 700px;
+  
+}
+
+/* Title (h5) - Responsive */
+.carousel-caption .title {
+  font-size: 2vw; /* Adjusting size based on viewport */
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+
+  text-align: right;
+  opacity: 90%;
+}
+
+/* Main Heading (h1) - Responsive */
+.carousel-caption .desc {
+  font-size: 2.3vw; /* Scaling dynamically */
+  font-weight: bold;
+  line-height: 1.0;
+ text-align: right;
+ opacity: 75%;
+}
+
+
+
+/* Media Query for smaller screens (tablets & phones) */
+@media (max-width: 768px) {
+  .carousel-caption {
+      width: 80%;
+      bottom: 10%;
+  }
+  .carousel-caption .title {
+      font-size: 2.8vw; /* Decrease title size */
+  }
+  .carousel-caption .desc {
+      font-size: 3.0vw; /* Decrease description size */
+  }
+ 
+}
+
+/* Media Query for very small screens (mobile) */
+@media (max-width: 480px) {
+  .carousel-caption .title {
+      font-size: 2.5vw;
+  }
+  .carousel-caption .desc {
+      font-size: 3.0vw;
+  }
+
+}
+
+/* service section css */
+.icon-img {
+    width: 80px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card {
+    text-align: center;
+    background: none;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: scale(1.09);
+}
+
+.zoom-effect {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+/* Destination section slider css*/
+
+.slider-container {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card:hover{
+  transform: scale(1.09);
+}
+.card {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* enquiry form section css*/
+  .enquiry-form-container {
+    background: #31cfe7; /* White background */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+    max-width: 600px; /* Restricting max width */
+    margin: auto; /* Centering the form */
+}
+
+.enquiry-form-container h5, 
+.enquiry-form-container h3 {
+    text-align: center; /* Center align headings */
+}
+
+.btn-block {
+    width: 100%; /* Full-width button */
+}
+
+  .social-icon {
+    color: #007bff; /* Bootstrap primary color */
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    color: #0056b3; /* Darker shade on hover */
+
+
+}
+
+.social-icon i {
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icon .fa-facebook {
+  color: #1877F2;
+}
+
+.social-icon .fa-instagram {
+  color: #E4405F;
+}
+
+.social-icon .fa-twitter { /* X */
+  color: #000000;
+}
+
+.social-icon .fa-whatsapp {
+  color: #25D366;
+}
+
+/* Optional: Hover Effect */
+.social-icon:hover i {
+  opacity: 0.8;
+}
+
+ /* WhatsApp Floating Button */
+ .whatsapp-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-button i {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  background-color: #1eb45a;
+}
+ /* call Floating Button */
+ .call-button {
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.call-button i {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.call-button:hover {
+  transform: scale(1.1);
+  background-color: #1eb45a;
+}
+
+
+.team-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.team-member {
+  background-color: #fff;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+}
+
+.team-member:hover{
+
+  transform: scale(1.09);
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Makes the image round */
+  margin-bottom: 15px;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+.team-member h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+.team-member .social-icon {
+  font-size: 1.5em;
+  color: #3b5998; /* Facebook blue */
+  text-decoration: none;
+}
+.team-member .social-icon:hover {
+  color: #2d4373; /* Darker Facebook blue */
+}
+/* for google review */
+
+.review-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.review {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+.review:last-child {
+  border-bottom: none;
+}
+
+.about{
+
+  margin-top: 6%;
+}
+
+/* Media Query for smaller screens (tablets & phones) */
+@media (max-width: 768px) {
+  .about {
+      margin-top:21%;
+  }
+
+ 
+}
+
+/* Media Query for very small screens (mobile) */
+@media (max-width: 480px) {
+ 
+  .about {
+    margin-top:20%;
+}
+
+}
+
+.contact{
+margin-top: 6%;
+}
+/* Media Query for smaller screens (tablets & phones) */
+@media (max-width: 768px) {
+  .contact {
+      margin-top:28%;
+  }
+
+ 
+}
+
+/* Media Query for very small screens (mobile) */
+@media (max-width: 480px) {
+ 
+  .contact {
+    margin-top:30%;
+}
+
+}
